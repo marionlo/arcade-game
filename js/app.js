@@ -51,8 +51,9 @@ const Player = function(x, y) {
 Player.prototype.update = function(dt) {
   // Win the game and reset the player with a small delay
   if (this.y < -30 && this.y < 20 ) {
-    setTimeout(function(){ player.x = 205;
-    player.y = 410; }, 500);
+    setTimeout(function(){
+      player.x = 205;
+      player.y = 410; }, 500);
 
   }
 };
