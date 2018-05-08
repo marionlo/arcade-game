@@ -42,6 +42,24 @@ Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
+// Function to make the player moves
+// Different scenarios, use of switch case to control the player
+Player.prototype.handleInput = function (key) {
+switch (key) {
+  case "up": player.y -= 100;
+  break;
+
+  case "down": player.y += 100;
+  break;
+
+  case "right": player.x += 100;
+  break;
+
+  case "left": player.x -= 100;
+  break;
+}
+};
+
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
@@ -63,4 +81,5 @@ document.addEventListener('keyup', function(e) {
     };
 
     player.handleInput(allowedKeys[e.keyCode]);
+
 });
