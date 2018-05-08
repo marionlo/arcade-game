@@ -46,18 +46,19 @@ Player.prototype.render = function() {
 // Different scenarios, use of switch case to control the player
 Player.prototype.handleInput = function (key) {
 switch (key) {
-  case "up": this.y -= 90;
+  case "up": if (this.y > 0 ) {this.y -= 90 }
   break;
 
-  case "down": this.y += 90;
+  case "down": if (this.y < 400 ) {this.y += 90;}
   break;
 
-  case "right": this.x += 100;
+  case "right": if (this.x < 400 ) {this.x += 100;}
   break;
 
-  case "left": this.x -= 100;
+  case "left": if (this.x > 10 ) {this.x -= 100;}
   break;
 }
+
 };
 
 
