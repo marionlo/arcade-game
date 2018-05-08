@@ -26,20 +26,32 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
-
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-const allEnemies = [];
-
-// Place the player object in a variable called player
 const Player = function(x, y) {
-    // Variables to determine the axis and the speed of the enemy object
+    // Variables to determine the axis of the player object
       this.x = x;
       this.y = y;
     // The image/sprite for our player, this uses
     // a helper we've provided to easily load images
     this.sprite = 'images/char-horn-girl.png';
 };
+
+Player.prototype.update = function(dt) {
+    // You should multiply any movement by the dt parameter
+    // which will ensure the game runs at the same speed for
+    // all computers.
+};
+
+Player.prototype.render = function() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+};
+
+
+// Now instantiate your objects.
+// Place all enemy objects in an array called allEnemies
+const allEnemies = [];
+
+// Place the player object in a variable called player
+const player = new Player();
 
 
 
