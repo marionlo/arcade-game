@@ -12,6 +12,7 @@ var Enemy = function(x, y, speed) {
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
+  this.x += this.speed*dt;
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
@@ -58,8 +59,10 @@ switch (key) {
   case "left": if (this.x > 10 ) {this.x -= 100;}
   break;
 }
-
 };
+
+
+
 
 
 // Now instantiate your objects.
@@ -68,6 +71,9 @@ const allEnemies = [];
 
 // Place the player object in a variable called player
 const player = new Player(205, 410);
+const enemy = new Enemy(-100, 130, 100);
+const enemy2 = new Enemy(-260, 230, 300);
+allEnemies.push(enemy, enemy2);
 
 
 
