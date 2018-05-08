@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-var Enemy = function() {
+var Enemy = function(x, y, speed) {
     // Variables to determine the axis and the speed of the enemy object
       this.x = x;
       this.y = y;
@@ -32,7 +32,7 @@ Enemy.prototype.render = function() {
 const allEnemies = [];
 
 // Place the player object in a variable called player
-const Player = function() {
+const Player = function(x, y) {
     // Variables to determine the axis and the speed of the enemy object
       this.x = x;
       this.y = y;
