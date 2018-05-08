@@ -22,6 +22,15 @@ Enemy.prototype.update = function(dt) {
         this.x = -100;
         this.speed = 150 + Math.floor(Math.random() * 300);
     };
+
+    // Axis-Aligned Bounding Box to check the collisions between the player and the enemies
+    if (player.x < this.x + 50 &&
+        player.x + 50 > this.x &&
+        player.y < this.y + 20 &&
+        20 + player.y > this.y) {
+        player.x = 205;
+        player.y = 410;
+    };
 };
 
 // Draw the enemy on the screen, required method for game
@@ -40,9 +49,7 @@ const Player = function(x, y) {
 };
 
 Player.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
+
 };
 
 Player.prototype.render = function() {
