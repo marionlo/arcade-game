@@ -16,6 +16,12 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+
+    // Reset enemies with a random speed
+    if (this.x > 520) {
+        this.x = -100;
+        this.speed = 150 + Math.floor(Math.random() * 300);
+    };
 };
 
 // Draw the enemy on the screen, required method for game
@@ -73,7 +79,8 @@ const allEnemies = [];
 const player = new Player(205, 410);
 const enemy = new Enemy(-100, 130, 100);
 const enemy2 = new Enemy(-260, 230, 300);
-allEnemies.push(enemy, enemy2);
+const enemy3 = new Enemy(-360, 50, 250);
+allEnemies.push(enemy, enemy2, enemy3);
 
 
 
