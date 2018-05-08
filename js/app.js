@@ -1,6 +1,6 @@
 // Enemies our player must avoid
 var Enemy = function() {
-    // Variables to determine the axis and the speed of the enemies
+    // Variables to determine the axis and the speed of the enemy object
       this.x = x;
       this.y = y;
       this.speed = speed;
