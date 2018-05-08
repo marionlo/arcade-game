@@ -48,7 +48,7 @@ Player.prototype.render = function() {
 const allEnemies = [];
 
 // Place the player object in a variable called player
-const player = new Player(202, 405);
+const player = new Player(205, 410);
 
 
 
