@@ -30,7 +30,16 @@ Enemy.prototype.render = function() {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const allEnemies = [];
+
 // Place the player object in a variable called player
+const Player = function() {
+    // Variables to determine the axis and the speed of the enemy object
+      this.x = x;
+      this.y = y;
+    // The image/sprite for our player, this uses
+    // a helper we've provided to easily load images
+    this.sprite = 'images/char-horn-girl.png';
+};
 
 
 
